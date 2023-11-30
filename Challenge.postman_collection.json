@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "4a265f45-728a-4afb-8170-a74e491977a5",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28520622"
+	},
+	"item": [
+		{
+			"name": "getAllCreditCards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveCreditCards",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditCardBrand\": \"VISA\",\r\n    \"creditCardNumber\": 1234567891012312,\r\n    \"cardHolder\": \"Georgie Denbrough\",\r\n    \"expirationDate\": \"2024-11-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processCreditCardOperation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditCard\" : {\r\n        \"creditCardBrand\": \"NARA\",\r\n        \"creditCardNumber\": 1234567891012312,\r\n        \"cardHolder\": \"Georgie Denbrough\",\r\n        \"expirationDate\": \"2024-11-20\"\r\n    },\r\n    \"amount\": \"500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/processoperation",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"processoperation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
